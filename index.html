@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio – Nguyen Nhu Quynh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#fefcff;
+  --accent:#73c7c7;
+  --accent2:#ff8fb1;
+  --text:#1f1f1f;
+  --soft:#8c8c8c;
+}
+
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(160deg,#ffffff,#f9fbff,#fff7fb);
+  color:var(--text);
+}
+
+/* LAYOUT */
+.container{
+  display:flex;
+  min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:310px;
+  padding:40px 28px;
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(18px);
+  border-right:1px solid #eee;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+  animation:fadeLeft 0.5s ease-out;
+}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-20px)}}
+
+/* AVATAR */
+.avatar{
+  width:150px;height:150px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+  border:5px solid #fff;
+  box-shadow:0 0 30px rgba(255,168,209,0.55),
+             0 0 20px rgba(115,199,199,0.4);
+  animation:glow 3.2s ease-in-out infinite;
+}
+.avatar img{width:100%;height:100%;object-fit:cover}
+
+@keyframes glow{
+  0%{box-shadow:0 0 18px rgba(255,168,209,0.55)}
+  50%{box-shadow:0 0 36px rgba(115,199,199,0.5)}
+  100%{box-shadow:0 0 18px rgba(255,168,209,0.55)}
+}
+
+.name{text-align:center;font-size:24px;font-weight:800;margin-top:5px}
+.role{text-align:center;color:var(--soft);font-size:14px}
+
+/* MENU */
+.menu{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.menu a{
+  padding:12px 14px;
+  text-decoration:none;
+  border-radius:14px;
+  font-weight:500;
+  color:var(--text);
+  transition:.2s;
+}
+.menu a:hover{
+  background:linear-gradient(90deg,#e7fcff,#ffe3f1);
+  color:#ff6fa2;
+  padding-left:18px;
+}
+
+/* MAIN CONTENT */
+.main{
+  flex:1;
+  padding:50px 70px;
+  animation:fadeUp .6s ease-out;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}}
+
+.title{
+  font-size:46px;font-weight:800;
+  background:linear-gradient(90deg,#73c7c7,#ff8fb1);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.subtitle{color:var(--soft);margin-top:8px;font-size:18px}
+
+/* BUTTONS */
+.btn, .btn-outline{
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:30px;
+  margin:20px 12px 0 0;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+}
+.btn{
+  background:linear-gradient(90deg,#73c7c7,#ff8fb1);
+  color:#fff;
+}
+.btn-outline{
+  border:2px solid #ffc1da;
+  color:#ff6fa2;
+}
+
+/* SECTIONS */
+.section{
+  margin-top:60px
+}
+.section h3{
+  font-size:28px;
+  background:linear-gradient(90deg,#ff8fb1,#73c7c7);
+  -webkit-background-clip:text;
+  color:transparent;
+  margin-bottom:15px;
+  font-weight:700;
+}
+
+/* TIMELINE */
+.timeline{
+  border-left:3px solid #ffe0ef;
+  padding-left:22px;
+}
+.timeline .item{
+  position:relative;
+  padding:10px 0;
+  margin-bottom:10px;
+}
+.timeline .item:before{
+  content:"";
+  width:13px;height:13px;
+  border-radius:50%;
+  background:#ff8fb1;
+  position:absolute;
+  left:-30px;top:16px;
+}
+
+/* SKILLS */
+.pills{
+  display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;
+}
+.pill{
+  padding:10px 18px;
+  border-radius:20px;
+  background:#e5fbfb;
+  color:#4fa9a9;
+  font-size:14px;font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{flex-direction:column}
+  .sidebar{width:100%;flex-direction:row;align-items:center;gap:20px}
+  .avatar{margin:0}
+  .main{padding:30px}
+  .title{font-size:34px}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="avatar">
+      <img src="images/profile.jpg" alt="Avatar">
+    </div>
+
+    <div>
+      <div class="name">Nguyen Nhu Quynh</div>
+      <div class="role">Foreign Trade University – External Economics</div>
+    </div>
+
+    <nav class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <section id="home">
+      <div class="title">I'm Nguyen Nhu Quynh</div>
+      <div class="subtitle">A creative student passionate about data analysis, branding, and tech-driven solutions.</div>
+
+      <a class="btn" href="#projects">View my projects</a>
+      <a class="btn-outline" href="#contact">Contact me</a>
+    </section>
+
+    <section id="about" class="section">
+      <h3>About Me</h3>
+      <p>I am <strong>Nguyen Nhu Quynh</strong>, a student majoring in External Economics at Foreign Trade University. I’m passionate about creativity, data analytics, branding, and projects that combine economics, technology, and design.</p>
+      <p>My goal is to apply analytical thinking and modern technology to create meaningful, practical solutions.</p>
+    </section>
+
+    <section id="education" class="section">
+      <h3>Education</h3>
+      <div class="timeline">
+        <div class="item">
+          <strong>Foreign Trade University (FTU)</strong><br>
+          <small>External Economics (2023 – 2027)</small>
+        </div>
+        <div class="item">
+          <strong>Bac Duyen Ha High School</strong><br>
+          <small>(2020 – 2023)</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h3>Skills</h3>
+      <div class="pills">
+        <div class="pill">SQL</div>
+        <div class="pill">Python</div>
+        <div class="pill">Excel</div>
+        <div class="pill">Azure</div>
+        <div class="pill">Adobe Illustrator</div>
+        <div class="pill">Data Analysis</div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h3>Projects</h3>
+      <p><strong>• Data Analysis Dashboard</strong> — Sales data analytics using Python, SQL, and Excel. <a href="#">Link</a></p>
+      <p><strong>• Creative Branding Project</strong> — Brand identity design using Adobe Illustrator. <a href="#">Link</a></p>
+      <p><strong>• Economics Research</strong> — Statistical modeling in international trade. <a href="#">Link</a></p>
+    </section>
+
+    <section id="certificates" class="section">
+      <h3>Certificates</h3>
+      <ul>
+        <li>Python for Data Analysis – Coursera</li>
+        <li>SQL for Data Science – UC Davis</li>
+        <li>Adobe Illustrator Fundamentals – Udemy</li>
+        <li>Azure AI Essentials – Microsoft</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <p>Email: <strong>quynhnn882@gmail.com</strong></p>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
